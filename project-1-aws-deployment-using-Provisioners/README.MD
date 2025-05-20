@@ -36,3 +36,17 @@ Implemented AWS security best practices, including IAM role assignments and secu
 5. Flask Application
 6. Getting a Link as Output
 7. Deploying the application
+
+<pre><font color="#12488B"><b>.</b></font>
+├── README.MD
+├── <font color="#26A269"><b>app.py</b></font>
+├── main.tf
+├── outputs.tf
+├── provider.tf
+├── terraform.tfstate
+├── terraform.tfstate.backup
+├── terraform.tfvars
+└── variables.tf
+
+1 directory, 9 files
+</pre>
