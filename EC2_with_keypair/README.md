@@ -8,9 +8,21 @@
 1 directory, 4 files
 </pre>
 
+#Please create a .tfvars file like this
 
-
-
+ cat prod-vars.tfvars 
+accesskey = ""  #your access key
+secretkey = ""  #your secretk ey
+region = "eu-west-1"
+instance_count = 1
+type = "t2.micro"
+ami = {
+  "eu-west-1" = "ami-0416cbe3c21834f41"
+  "eu-west-2" = "ami-0a94c8e4ca2674d5a"
+  "ap-south-1" = "ami-0a94c8e4ca2674d5aee"
+}
+ssh_public_key_path = "~/.ssh/terraform-key.pub"
+tag = "ubuntu"
 
 
 ##Generate A ssh key;
