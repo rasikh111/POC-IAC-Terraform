@@ -1,28 +1,31 @@
-##Task:
 <pre><font color="#12488B"><b>.</b></font>
 ├── README.md
 ├── ec2.tf
 ├── prod-vars.tfvars
+├── providers.tf
+├── sg.tf
 └── variables.tf
 
-1 directory, 4 files
+1 directory, 6 files
 </pre>
 
 #Please create a .tfvars file like this
 
 <pre>cat prod-vars.tfvars 
-accesskey = &quot;&quot;  #your access key
-secretkey = &quot;&quot;  #your secretk ey
-region = &quot;eu-west-1&quot;
+accesskey      = &quot;&quot;                     #your access key
+secretkey      = &quot;&quot; #your secretk ey
+region         = &quot;eu-west-1&quot;
 instance_count = 1
-type = &quot;t2.micro&quot;
+type           = &quot;t2.micro&quot;
 ami = {
-  &quot;eu-west-1&quot; = &quot;ami-0416cbe3c21834f41&quot;
-  &quot;eu-west-2&quot; = &quot;ami-0a94c8e4ca2674d5a&quot;
+  &quot;eu-west-1&quot;  = &quot;ami-0416cbe3c21834f41&quot;
+  &quot;eu-west-2&quot;  = &quot;ami-0a94c8e4ca2674d5a&quot;
   &quot;ap-south-1&quot; = &quot;ami-0a94c8e4ca2674d5aee&quot;
 }
 ssh_public_key_path = &quot;~/.ssh/terraform-key.pub&quot;
-tag = &quot;ubuntu&quot;
+tag                 = &quot;ubuntu&quot;
+allowed_ports       = [80, 22, 443, 3306]
+
 </pre>
 
 ##Generate A ssh key;
