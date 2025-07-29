@@ -2,6 +2,10 @@ resource "aws_security_group" "sg_tf" {
   name        = "my-sg"
   description = "Security group with dynamic ingress rules"
 
+  tags = {
+    Name = "open sg"
+  }
+
   dynamic "ingress" {
     for_each = var.allowed_ports
     iterator = port
@@ -12,5 +16,12 @@ resource "aws_security_group" "sg_tf" {
       protocol    = "tcp"
       cidr_blocks = ["0.0.0.0/0"]
     }
+  }
+
+  egress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
   }
 }
