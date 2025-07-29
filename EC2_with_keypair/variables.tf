@@ -1,5 +1,5 @@
 variable "region" {
-  type    = string
+  type = string
 }
 
 variable "instance_count" {
@@ -7,7 +7,7 @@ variable "instance_count" {
 }
 
 variable "ami" {
-  type = map
+  type = map(any)
 }
 variable "type" {
   type = string
@@ -23,3 +23,8 @@ variable "tag" {
 }
 variable "ssh_public_key_path" {
 }
+variable "allowed_ports" {
+  description = "List of allowed ingress ports"
+  type        = list(number)
+}
+
