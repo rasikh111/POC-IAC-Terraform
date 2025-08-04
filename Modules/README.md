@@ -13,11 +13,11 @@ allowed_ports  = [22, 80, 443]
 
 ---
 ## Run
-
-terraform init
+<pre>terraform init
 terraform fmt
 terraform validate
-terraform plan --var-file=ec2values.tfvars 
+terraform plan --var-file=ec2values.tfvars
 terraform apply --var-file=ec2values.tfvars --auto-approve
 
+</pre>
 ---
