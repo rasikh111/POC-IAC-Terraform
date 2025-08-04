@@ -7,7 +7,7 @@ variable "instance_count" {
 }
 
 variable "ami" {
-  type = map(any)
+  type = string
 }
 variable "type" {
   type = string
@@ -20,8 +20,6 @@ variable "secretkey" {
 }
 variable "tag" {
   type = string
-}
-#variable "ssh_public_key_path" {
 }
 variable "allowed_ports" {
   description = "List of allowed ingress ports"
