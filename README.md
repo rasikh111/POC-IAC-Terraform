@@ -1,4 +1,4 @@
-# 🚀 POC-IAC-Terraform
+# POC-IAC-Terraform
 
 ## ☁️ About Terraform & AWS
 
